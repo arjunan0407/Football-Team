@@ -96,43 +96,6 @@ body {
     z-index: 998;
 }
 
-.Home-page .home-content a>div div {
-    position: absolute;
-    top: 170px;
-    left: 710px;
-    width: 600px;
-    height: 200px;
-    background-color: rgba(137, 137, 137, 0.1);
-    animation: boxing infinite linear;
-    animation-duration: 5s;
-}
-
-@keyframes boxing {
-    0% {
-        clip-path: path("M 60 10 L 540,20 L 540,30 L 360,50 L 301,80 L 301,100 L 350,100 L 350,120 L 250,120 L 250,100 L 299,100 L 299,80 L 220,50 L 60,10 z");
-    }
-
-    25% {
-        clip-path: path("M 20 0 L 560,0 L 560,60 L 301,60 L 301,80 L 301,80 L 400,80 L 400,150 L 180,150 L 180,80 L 299,80 L 299,80 L 299,60 L 20,60 z");
-    }
-
-    50% {
-        clip-path: path("M 30 0 L 560,0 L 560,60 L 301,60 L 301,80 L 301,80 L 400,80 L 400,150 L 180,150 L 180,80 L 299,80 L 299,80 L 299,60 L 30,60 z");
-    }
-
-    75% {
-        clip-path: path("M 60 10 L 560,20 L 5650,30 L 360,50 L 301,80 L 301,100 L 350,100 L 350,120 L 250,120 L 250,100 L 299,100 L 299,80 L 220,50 L 60,10 z");
-    }
-
-    100% {
-        clip-path: path("M 60 10 L 540,20 L 540,30 L 360,50 L 301,80 L 301,100 L 350,100 L 350,120 L 250,120 L 250,100 L 299,100 L 299,80 L 220,50 L 60,10 z");
-    }
-}
-
-/* .Home-page .home-content a>div div:hover{
-    
-} */
-
 .Home-page .home-content {
     width: 700px;
 }
@@ -143,7 +106,6 @@ body {
     border-radius: 50px;
     gap: 50px;
     box-shadow: 0 0 10px 2px rgb(103, 102, 102);
-    /* transition: all 2s; */
     animation: wobble infinite linear both;
     animation-duration: 10s;
 }
@@ -216,6 +178,24 @@ body {
     height: 200px;
 }
 
+
+
+/* Players */
+
+.Players-content>div {
+    position :absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+/* Content Page */
+
 .Content-image {
     position: absolute;
 }
@@ -230,7 +210,6 @@ body {
 .Content-image .content>h1 {
     font-size: 50px;
     background-color: rgba(0, 0, 0, 0.2);
-    /* border-radius: 20px; */
     box-shadow: 0 0 10px 2px rgb(0, 0, 0);
     padding: 10px;
 }
@@ -261,11 +240,8 @@ body {
     color: white;
 }
 
-/* .Content-image .content>div>.hover-content h1 {
-    
-} */
 
 .Content-image .content>div:hover>.hover-content {
-    transform: translateY(-180px);
+    transform: translateY(-170px);
     opacity: 1;
 }
