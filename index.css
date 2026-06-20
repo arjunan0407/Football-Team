@@ -176,6 +176,7 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 20px 1px rgb(255, 255, 255);
     padding: 10px;
+    color: white;
 }
 
 /* Players */
@@ -190,6 +191,7 @@ body {
 }
 
 .Players-content>div div {
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -200,16 +202,28 @@ body {
     border-radius: 10px 50px;
     color: black;
     box-shadow: 0 0 10px 1px rgb(0, 0, 0);
-    transition: all 1s;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    flex: 1;
+    filter: grayscale(80%);
+    transition:all 3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .Players-content>div div:hover{
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
+    flex: 2;
+    filter: grayscale(0%);
+}
+
+.Players-content>div div:hover>img{
+    transform: scale(1.2) translate(-200px);
 }
 
 .Players-content>div div img {
     width: 280px;
     height: 400px;
+    transition: all 0.5s;
 }
 
 .Players-content>div div h2 {
@@ -222,6 +236,30 @@ body {
     border-radius: 20px;
     color: green;
     border: 1px solid dimgrey;
+}
+
+.hide{
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    background-color: transparent;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 10s;
+    transform: scale(0);
+}
+
+.hide p {
+    color: red;
+}
+
+.hide p span{
+    font-style: italic;
+}
+
+.Players-content>div div:hover>.hide {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* Stats Page */
@@ -259,6 +297,7 @@ body {
     padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+    transition: all 1s;
 }
 
 .Stats-content>div>div h3 {
@@ -292,6 +331,43 @@ body {
 .Stats-content>div>div img{
     height: 200px;
     width: 200px;
+}
+
+.pl-stats{
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(0px);
+}
+
+.Stats-content>div>div:hover{
+    height: 500px;
+    align-items: start;
+}
+
+.Stats-content>div>div:hover h3{
+    transform: translate(-150px, 0px);
+}
+
+.Stats-content>div>div:hover>.pl-stats{
+    transform: translateY(160px);
+    opacity: 1;
+}
+
+.st-btn{
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+    font-size: 32px;
+    transition: all 5s;
 }
 
 /* Content Page */
