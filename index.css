@@ -167,6 +167,10 @@ body {
 }
 
 /* Commen Style */
+a{
+    text-decoration: none;
+    color: white;
+}
 .content{
     position: relative;
 }
@@ -236,6 +240,11 @@ body {
     border-radius: 20px;
     color: green;
     border: 1px solid dimgrey;
+}
+
+.Players-content>div div button a{
+    text-decoration: none;
+    color: green;
 }
 
 .hide{
@@ -368,6 +377,7 @@ body {
     box-shadow: 0 0 10px 1px rgb(255, 255, 255);
     font-size: 32px;
     transition: all 5s;
+    color: white;
 }
 
 /* Content Page */
@@ -491,4 +501,145 @@ body {
     flex-direction: column;
     padding: 10px 35px 0px 35px;
     border-radius: 10px;
+}
+
+
+
+/* Players page */
+
+/* common for players page */
+.pl-bot{
+    margin-bottom: 120px;
+}
+
+.pl-nav{
+    background-color: white;
+    border-bottom: 1px solid blue;
+    position: fixed;
+    width: 100%;
+}
+
+.pl-nav a {
+    color: rgb(74, 74, 74);
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom : 1px solid transparent;
+}
+
+.pl-nav a:hover{
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+
+
+/* GoalKeeper */
+.pl-gk{
+    flex-direction: column;
+}
+
+.pl-head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20PX 20PX;
+}
+
+.pl-head h1{
+    color: Blue;
+}
+.pl-head span{
+    width: 60%;
+    border-bottom: 1px solid black;
+}
+
+.pl-box{
+    padding: 20px 70px;
+    width: 90%;
+    gap: 80px;
+}
+
+.pl-box>div{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    background-color: rgba(74, 97, 139, 0.5);
+    border-radius: 5px;
+    /* margin-top: 100px; */
+}
+
+.pl-box>div img{
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    top: -30px;
+    left: -20px;
+    transition: all 1s;
+}
+.pl-box>div>.pl-name{
+    position: absolute;
+    bottom: -120px;
+    color: blue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pl-box>div>.pl-name p,.pl-box>div>.pl-name h1{
+    margin-bottom: 0px;
+}
+
+.pl-inbox {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 310px;
+    height: 425px;
+    background-image: linear-gradient(220deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.7));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    opacity: 0;
+    border-radius: 5px;
+    transition: all 1s;
+}
+
+.pl-inbox>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pl-inbox>div>p{
+    color: white;
+    margin: 0px;
+}
+.pl-inbox>div>h1{
+    color: white;
+    font-size: 70px;
+}
+
+.pl-inbox>span{
+    position: absolute;
+    left: 140px;
+    height: 40%;
+    width: 1px;
+    border-right: 1px solid rgba(249, 249, 249, 0.5);
+    rotate: 20deg;
+}
+
+.pl-box>div:hover>.pl-inbox{
+    opacity: 1;
+}
+
+.pl-box>div:hover>img{
+    transform: scale(1.05);
 }
