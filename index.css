@@ -55,6 +55,7 @@ body {
 .mynavbar div:last-child {
     width: 35%;
     padding: 0 20px 0 0;
+    transition: all 1s;
 }
 
 .mynavbar div:last-child a {
@@ -71,6 +72,72 @@ body {
     color: transparent;
     background-image:  linear-gradient( rgb(255, 0, 0), white);
     background-clip: text;
+}
+
+.mynavbar label, .mynavbar input{
+    display: none;
+}
+
+.mynavbar label i{
+    font-size: 30px;
+}
+
+.mynavbar input:checked~div{
+    top: 100px;
+    right: 10px;
+}
+
+
+/* Navbar Responsive */
+@media only screen and (min-width:1000px) and (max-width:1300px){
+    .mynavbar div:last-child{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width:600px) and (max-width:1000px){
+    .mynavbar{
+        left: 20px;
+    }
+    .mynavbar div:last-child{
+        width: 60%;
+        position: absolute;
+        top: 100px;
+        right: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 1px white;
+        gap: 50px;
+    }
+    .mynavbar label{
+        display: unset;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:600px){
+    .mynavbar{
+        left: 5px;
+    }
+    .mynavbar div{
+        gap: 5px;
+    }
+    .mynavbar div:last-child{
+        width: 90%;
+        position: absolute;
+        top: 100px;
+        right: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 1px white;
+        gap: 50px;
+    }
+    .mynavbar label{
+        display: unset;
+    }
 }
 
 /* Home-Page */
@@ -166,6 +233,47 @@ body {
     opacity: 0.7;
 }
 
+/* Home-page Responsive */
+@media only screen and (min-width:550px) and (max-width:750px) {
+    .Home-page .home-content{
+        width: 500px;
+    }
+    .Home-page .home-content a>div h1{
+        font-size: 40px;
+    }
+    .Home-page .home-content p{
+        font-size: 16px;
+    }
+    .Home-page .home-content img{
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:550px) {
+    .Home-page .home-content{
+        width: 90%;
+    }
+    .Home-page .home-content a>div h1{
+        font-size: 24px;
+    }
+    .Home-page .home-content p{
+        font-size: 14px;
+    }
+    .Home-page .home-content img{
+        width: 90%;
+        height: 250px;
+    }
+    .Home-page .home-content a>div{
+        animation: unset;
+    }
+    .Home-page .home-content a>div{
+        padding: 10px;
+        border-radius: 10px;
+        gap: 20px;
+    }
+}
+
 /* Commen Style */
 a{
     text-decoration: none;
@@ -184,10 +292,13 @@ a{
 }
 
 /* Players */
+.Players-content{
+    margin-bottom: 100px !important;
+}
 .Players-content>div {
     position :absolute;
     width: 100%;
-    height: 95%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -271,6 +382,138 @@ a{
     transform: scale(1);
 }
 
+@media only screen and (min-width:1000px) and (max-width:1250px) {
+    .Players-content>div>div{
+        width: 300px;
+    }
+    .Players-content>div>div>div{
+        width: 65%;
+        padding: 10px;
+    }
+    .Players-content>div>div>div p{
+        margin-bottom: 0px;
+    }
+    .Players-content>div{
+        gap: 30px;
+    }
+    .Players-content>div div:hover>img{
+        transform: translate(-200px);
+    }
+    .hide{
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width:900px) and (max-width:1000px) {
+    .Players-content>div>div{
+        width: 100px;
+    }
+    .Players-content>div>div>div{
+        width: 90%;
+        padding: 10px;
+    }
+    .Players-content>div>div>div p{
+        margin-bottom: 0px;
+    }
+    .Players-content>div{
+        gap: 10px;
+    }
+    .Players-content>div div:hover>img{
+        transform: translate(-50px);
+    }
+    .hide{
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width:700px) and (max-width:900px) {
+    .Players-content>div>div{
+        width: 100px;
+        gap: 0px;
+        padding: 10px;
+    }
+    .Players-content>div>div h1{
+        font-size: 30px;
+    }
+    .Players-content>div>div h2{
+        font-size: 26px;
+    }
+    .Players-content>div>div>div{
+        width: 90%;
+        padding: 10px;
+    }
+    .Players-content>div>div>div p{
+        margin-bottom: 0px;
+        font-size: 16px;
+    }
+    .Players-content>div{
+        gap: 10px;
+    }
+    .Players-content>div div:hover>img{
+        transform: translate(-50px);
+    }
+    .hide{
+        top: 20px;
+    }
+    .Players-content>div div img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width:500px) and (max-width:700px){
+    .Players-content>div{
+        justify-content: flex-start;
+        padding: 0 100px;
+    }
+    .Players-content>div>div{
+        width: 300px;
+        gap: 0px;
+        padding: 10px;
+    }
+    .Players-content>div>div h1{
+        font-size: 30px;
+    }
+    .Players-content>div>div h2{
+        font-size: 26px;
+    }
+    .Players-content>div>div>div{
+        width: 90%;
+        padding: 10px;
+    }
+    .hide{
+        top: 20px;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:500px){
+    .Players-content>div{
+        justify-content: flex-start;
+        padding: 0 5px;
+    }
+    .Players-content>div>div{
+        width: 300px;
+        gap: 0px;
+        padding: 10px;
+    }
+    .Players-content>div>div h1{
+        font-size: 30px;
+    }
+    .Players-content>div>div h2{
+        font-size: 26px;
+    }
+    .Players-content>div>div>div{
+        width: 90%;
+        padding: 10px;
+    }
+    .hide{
+        top: 20px;
+    }
+    .Players-content>div div:hover>img{
+        transform: translate(-50px);
+    }
+}
+
 /* Stats Page */
 .Stats-content>div{
     display: flex;
@@ -307,6 +550,7 @@ a{
     border-radius: 20px;
     box-shadow: 0 0 10px 1px rgb(255, 255, 255);
     transition: all 1s;
+    position: relative;
 }
 
 .Stats-content>div>div h3 {
@@ -344,7 +588,7 @@ a{
 
 .pl-stats{
     position: absolute;
-    width: 50%;
+    width: 90%;
     opacity: 0;
     transition: all 1s;
     transform: translateY(0px);
@@ -378,6 +622,123 @@ a{
     font-size: 32px;
     transition: all 5s;
     color: white;
+}
+
+/* stats Responsive */
+@media only screen and (min-width:720px) and (max-width:1000px) {
+    .Stats-content>div>h1{
+        font-size: 65px;
+    }
+    .Stats-content>div>p{
+        font-size: 22px;
+    }
+    .Stats-content>div>div{
+        width: 700px;
+        gap: 20px;
+        padding: 10px 18px;
+    }
+    .Stats-content div>div>div h1 {
+        font-size: 40px;
+    }
+
+    .Stats-content div>div>div p {
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+
+    .Stats-content>div>div img{
+        height: 180px;
+        width: 180px;
+    }
+    .Stats-content>div>div:hover{
+        height: 450px;
+    }
+    .st-btn{
+        width: 700px;
+    }
+}
+
+@media only screen and (min-width:500px) and (max-width:720px) {
+    .Stats-content>div>div h3{
+        font-size: 30px;
+    }
+    .Stats-content>div>h1{
+        font-size: 45px;
+    }
+    .Stats-content>div>p{
+        font-size: 18px;
+    }
+    .Stats-content>div>div{
+        width: 500px;
+        gap: 10px;
+        padding: 10px 12px;
+    }
+    .Stats-content div>div>div h1 {
+        font-size: 22px;
+    }
+
+    .Stats-content div>div>div p {
+        font-size: 14px;
+        padding: 5px 5px;
+    }
+
+    .Stats-content>div>div img{
+        height: 150px;
+        width: 150px;
+    }
+    .Stats-content>div>div:hover{
+        height: 350px;
+    }
+    .st-btn{
+        width: 500px;
+    }
+}
+@media only screen and (min-width:300px) and (max-width:500px) {
+    .Stats-content>div>div h3{
+        font-size: 50px;
+        rotate: 0deg;
+        transform: translate(-110px, 0px);
+    }
+    .Stats-content>div>h1{
+        font-size: 45px;
+    }
+    .Stats-content>div>p{
+        font-size: 16px;
+    }
+    .Stats-content>div>div{
+        width: 98%;
+        gap: 10px;
+        padding: 10px 12px;
+        flex-direction: column;
+    }
+    .Stats-content div>div>div h1 {
+        font-size: 45px;
+    }
+
+    .Stats-content div>div>div p {
+        font-size: 21px;
+        padding: 5px 5px;
+    }
+
+    .Stats-content>div>div img{
+        height: 200px;
+        width: 200px;
+    }
+    .Stats-content>div>div:hover{
+        height: 1150px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .Stats-content>div>div:hover h3{
+        transform: translate(-110px, 0px);
+    }
+
+    .Stats-content>div>div:hover>.pl-stats{
+        transform: translateY(650px);
+    }
+    .st-btn{
+        width: 280px;
+    }
 }
 
 /* Content Page */
@@ -456,6 +817,7 @@ a{
     gap: 30px;
     padding: 20px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .Footer>div>div>div:nth-child(2)>div {
@@ -488,7 +850,7 @@ a{
 
 .Footer>div>div:first-child>div:nth-child(2)>div {
     background-color: rgba(56, 56, 56, 0.7);
-    width: 200px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -496,7 +858,31 @@ a{
     padding: 10px 35px 0px 35px;
     border-radius: 10px;
 }
+/* footer Responsive */
+@media only screen and (min-width:1300px) and (max-width:1500px) {
+    .Footer>div{
+        padding: 100px 100px;
+    }
+}
 
+@media only screen and (min-width:1200px) and (max-width:1300px) {
+    .Footer>div{
+        padding: 100px 50px;
+    }
+}
+
+@media only screen and (min-width:300px) and (max-width:1200px) {
+    .Footer>div{
+        padding: 100px  10px;
+    }
+    .Footer>div>div:nth-child(5)>div:nth-child(2){
+        justify-content: flex-start;
+        padding: 20px 50px ;
+    }
+    .Footer>div>div:nth-child(5)>div:nth-child(2)>div{
+        width: 220px;
+    }
+}
 
 
 /* Players page */
