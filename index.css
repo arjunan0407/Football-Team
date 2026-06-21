@@ -389,12 +389,6 @@ a{
     align-items: center;
 }
 
-/* .Content-image .content>h1 {
-    font-size: 50px;
-    background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px 2px rgb(0, 0, 0);
-    padding: 10px;
-} */
 
 .Content-image .content>div  {
     width: 400px;
@@ -506,14 +500,15 @@ a{
 
 
 /* Players page */
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /* common for players page */
 .pl-bot{
     margin-bottom: 120px;
 }
 
+/* player page nav bar */
 .pl-nav{
-    background-color: white;
+    /* background-color: white; */
     border-bottom: 1px solid blue;
     position: fixed;
     width: 100%;
@@ -527,6 +522,8 @@ a{
     justify-content: center;
     align-items: center;
     border-bottom : 1px solid transparent;
+    font-family: "Grot12", arial, helvetica, sans-serif;
+    letter-spacing: 0.02em;
 }
 
 .pl-nav a:hover{
@@ -549,11 +546,14 @@ a{
 }
 
 .pl-head h1{
-    color: Blue;
+    color: #004f9f;
+    font-family: "England FC", arial, helvetica, sans-serif;
+    line-height: 4.4rem;
+    letter-spacing: -0.01em;
 }
 .pl-head span{
     width: 60%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #5b6885;;
 }
 
 .pl-box{
@@ -568,7 +568,6 @@ a{
     height: 350px;
     background-color: rgba(74, 97, 139, 0.5);
     border-radius: 5px;
-    /* margin-top: 100px; */
 }
 
 .pl-box>div img{
@@ -582,7 +581,6 @@ a{
 .pl-box>div>.pl-name{
     position: absolute;
     bottom: -120px;
-    color: blue;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -592,6 +590,12 @@ a{
 }
 .pl-box>div>.pl-name p,.pl-box>div>.pl-name h1{
     margin-bottom: 0px;
+    color: #004f9f;
+}
+
+.pl-box>div>.pl-name h1{
+    font-family: "England FC", arial, helvetica, sans-serif;
+    letter-spacing: -0.01em;
 }
 
 .pl-inbox {
