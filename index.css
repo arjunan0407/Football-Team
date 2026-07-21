@@ -887,10 +887,6 @@ a{
 
 /* Players page */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-/* common for players page */
-.pl-bot{
-    margin-bottom: 120px;
-}
 
 /* player page nav bar */
 .pl-nav{
@@ -898,6 +894,18 @@ a{
     border-bottom: 1px solid blue;
     position: fixed;
     width: 100%;
+    padding: 10px 0 0 0;
+}
+
+.pl-nav>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pl-nav div:last-child{
+    transition: all 1s;
 }
 
 .pl-nav a {
@@ -917,10 +925,61 @@ a{
     color: blue;
 }
 
+.pl-nav label, .pl-nav input{
+    display: none;
+}
+
+.pl-nav label i{
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+
+.pl-nav input:checked~div{
+    top: 50px;
+    right: 10px;
+}
+
+@media only screen and (min-width:300px) and (max-width:800px){
+    .pl-nav{
+        left: 5px;
+    }
+    .pl-nav a {
+        color: white;
+    }
+    .pl-nav div{
+        gap: 5px;
+    }
+    .pl-nav a:hover{
+        border-bottom: 2px solid rgb(150, 149, 149);
+        color: rgb(156, 156, 156);
+    }
+    .pl-nav div:last-child{
+        width: 200px;
+        position: absolute;
+        top: 50px;
+        right: -100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 1px white;
+        gap: 10px;
+    }
+    .pl-nav label{
+        display: unset;
+    }
+}
+
 
 /* GoalKeeper */
 .pl-gk{
     flex-direction: column;
+}
+
+.pl-commen{
+    margin-top: 50px;
 }
 
 .pl-head{
@@ -929,6 +988,7 @@ a{
     align-items: center;
     width: 100%;
     padding: 20PX 20PX;
+    margin-top: 100px;
 }
 
 .pl-head h1{
@@ -945,7 +1005,13 @@ a{
 .pl-box{
     padding: 20px 70px;
     width: 90%;
-    gap: 80px;
+    /* display: grid;
+    grid-template-areas:"box1 box2 box3 box4"
+    "box5 box6 box7 box8"; */
+    row-gap: 150px;
+    column-gap: 100px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .pl-box>div{
@@ -966,7 +1032,7 @@ a{
 }
 .pl-box>div>.pl-name{
     position: absolute;
-    bottom: -120px;
+    bottom: -110px;
     width: 100%;
     display: flex;
     flex-direction: column;
